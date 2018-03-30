@@ -1,0 +1,40 @@
+// maximum length of sequence in a martix
+
+#include<bits/stdc++.h>
+using namespace std;
+static int countt=0;
+int check(string a[],char str,int i,int j,int count){
+	if(i>=3||j>=3||a[i][j]!=str)
+	return 0;
+	cout<<str<<" ";
+	if(count>countt)
+	countt+=1;
+	check(a,str+1,i+1,j,count+1);
+	check(a,str+1,i+1,j+1,count+1);
+	check(a,str+1,i+1,j-1,count+1);
+	check(a,str+1,i-1,j,count+1);
+	check(a,str+1,i-1,j-1,count+1);
+	check(a,str+1,i-1,j+1,count+1);
+	check(a,str+1,i,j-1,count+1);
+	check(a,str+1,i,j+1,count+1);
+	return 1;
+}
+int main(){
+	string a[]={"acd",
+                "hbe",
+                "igf",
+                };
+    char str;
+    cin>>str;
+    int max=-1;
+    for(int i=0;i<3;i++){
+    	for(int j=0;j<3;j++){
+    		if(str==a[i][j]){
+    		 {
+			    check(a,str,i,j,1);
+			}
+		}
+	}}
+	cout<<countt<<endl;
+    return 0;
+}
