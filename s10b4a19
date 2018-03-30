@@ -1,0 +1,13 @@
+//10.program
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n;
+	char ch;
+	while(scanf("%c %d",&ch,&n)){
+		while(n--){
+			printf("%c",ch);
+		}
+	}
+	return 0;
+}
