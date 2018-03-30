@@ -1,0 +1,20 @@
+//3 4 33 34 43 44 333 334 343 433 443 444.....
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	
+	int a[n];
+	 a[0]=3;
+	 a[1]=4;
+	 int index=2;
+	 for(int i=0;i<n-2;i++){
+	 	a[index++]=a[i]*10+3;
+	 	a[index++]=a[i]*10+4;
+	 }
+	 for(int i=0;i<n;i++)
+	 cout<<a[i]<<" ";
+	
+	return 0;
+}
