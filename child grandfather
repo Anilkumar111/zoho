@@ -1,0 +1,28 @@
+//5 program
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	string str[n][2];
+	for(int i=0;i<n;i++){
+		cin>>str[i][0]>>str[i][1];
+	}
+	string gfa;
+	cin>>gfa;
+	int c=0;
+	for(int i=0;i<n;i++){
+		if(gfa==str[i][1]){
+			string papa=str[i][0];
+			for(int j=0;j<n;j++){
+				if(papa.compare(str[j][1])){
+					cout<<papa<<" ";
+					c++;
+				}
+			}
+		}
+		
+	}
+	cout<<c<<" ";
+	return 0;
+}
